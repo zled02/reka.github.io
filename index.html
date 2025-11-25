@@ -5,14 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi történetünk ❤️</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="container">
-        <h1>❤️ Ennyi ideje vagyunk együtt ❤️</h1>
-        <h2 id="timer"></h2>
-        <p class="date-info">2020. 08. 01. óta</p>
+    <!-- faint background hearts (pure CSS) -->
+    <div class="bg-hearts" aria-hidden="true">
+        <span class="bg-heart" style="--i:1">❤️</span>
+        <span class="bg-heart" style="--i:2">❤️</span>
+        <span class="bg-heart" style="--i:3">❤️</span>
+        <span class="bg-heart" style="--i:4">❤️</span>
+        <span class="bg-heart" style="--i:5">❤️</span>
+        <span class="bg-heart" style="--i:6">❤️</span>
+        <span class="bg-heart" style="--i:7">❤️</span>
+        <span class="bg-heart" style="--i:8">❤️</span>
     </div>
+    <header class="site-header">
+        <div class="brand">Mi történetünk <span class="heart">❤️</span></div>
+    
+    </header>
+
+    <main class="hero minimal">
+
+        <section class="card">
+            <h1 class="title">❤️ Ennyi ideje vagyunk együtt ❤️</h1>
+            <p class="subtitle">A kezdet: <strong>2020.08.01</strong></p>
+
+            <div id="timer" class="timer" aria-live="polite">—</div>
+
+            <p class="date-info">Minden nap veled a kedvencem.</p>
+
+            <!-- buttons removed for minimal design -->
+        </section>
+    </main>
+
+    <section id="notes" class="notes minimal-note">
+        <p class="note">Minden nap veled egy új kaland — szeretlek most és mindörökké.</p>
+    </section>
 
     <script src="script.js"></script>
 </body>

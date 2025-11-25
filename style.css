@@ -1,30 +1,41 @@
-:root{
---bg:#fff5f8;
---card:#ffffff;
---accent:#ff6b9a;
---muted:#7b7b7b;
---glass: rgba(255,255,255,0.6);
---shadow: 0 10px 25px rgba(15,15,15,0.08);
-font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #ff7aa2, #ffbdd4);
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+    text-align: center;
 }
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#fff);display:flex;align-items:center;justify-content:center;padding:24px}
-.card{width:100%;max-width:720px;background:var(--card);border-radius:18px;padding:28px;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,0.03)}
-.hero{text-align:center;padding:8px 12px}
-.hearts{font-size:22px;opacity:0.9}
-.hearts span{display:inline-block;margin:0 6px;transform:translateY(0);animation:beat 1.6s infinite}
-.hearts span:nth-child(2){animation-delay:.3s}
-@keyframes beat{0%{transform:scale(1)}40%{transform:scale(1.25)}80%{transform:scale(1)}}
-h1{font-size:34px;margin:8px 0 4px;color:var(--accent)}
-.subtitle{margin:0;color:var(--muted)}
-.counter{margin-top:20px;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));border-radius:12px}
-.time-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.time-item{background:var(--glass);backdrop-filter:blur(4px);border-radius:10px;padding:14px;text-align:center}
-.time-item span{display:block;font-size:22px;font-weight:700;color:#222}
-.time-item small{display:block;color:var(--muted);margin-top:6px}
-.note{margin-top:18px;color:#333;padding:12px}
-.actions{display:flex;gap:10px;justify-content:center;margin-top:12px}
-button{background:var(--accent);color:white;border:none;padding:10px 14px;border-radius:10px;cursor:pointer;box-shadow:0 6px 18px rgba(255,107,154,0.18)}
-button#shareBtn{background:linear-gradient(90deg,var(--accent),#ff8fb3)}
-button:active{transform:translateY(1px)}
-@media (max-width:520px){.time-grid{grid-template-columns:repeat(2,1fr)}h1{font-size:26px}}
+
+.container {
+    margin-top: 12vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+#timer {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+.date-info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Animáció a számlálóhoz */
+@keyframes fade {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#timer {
+    animation: fade 1s ease-in-out;
+}

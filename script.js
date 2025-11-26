@@ -27,7 +27,7 @@ function formatElapsed(startDate) {
 }
 
 function updateTimer() {
-    const startDate = new Date("2020-08-01T00:00:00");
+    const startDate = new Date("2020-08-01T14:10:00");
     const t = formatElapsed(startDate);
 
     const pieces = [];
